@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phones>
+  <phone>
+    <brand>Samsung</brand>
+    <model>Galaxy S20</model>
+    <price>₱30,990</price>
+    <release_year>2020</release_year>
+    <specifications>
+      <display>6.2 inch Dynamic AMOLED, 3200 x 1440 pixels</display>
+      <processor>Qualcomm Snapdragon 865</processor>
+      <memory>128GB or 512GB</memory>
+      <camera>12MP wide, 12MP ultra wide, and 64MP telephoto cameras, 8K video recording</camera>
+      <battery>4000 mAh</battery>
+    </specifications>
+  </phone>
+  <phone>
+    <brand>Apple</brand>
+    <model>iPhone 11</model>
+    <price>₱47,990</price>
+    <release_year>2019</release_year>
+    <specifications>
+      <display>6.1 inch Liquid Retina HD, 1792 x 828 pixels</display>
+      <processor>Apple A13 Bionic</processor>
+      <memory>64GB, 128GB, or 256GB</memory>
+      <camera>Dual 12MP ultra wide and wide cameras, 4K video recording</camera>
+      <battery>3110 mAh</battery>
+    </specifications>
+  </phone>
+  <phone>
+    <brand>Google</brand>
+    <model>Pixel 4</model>
+    <price>₱34,990</price>
+    <release_year>2019</release_year>
+    <specifications>
+      <display>5.7 inch P-OLED, 2280 x 1080 pixels</display>
+      <processor>Qualcomm Snapdragon 855</processor>
+      <memory>64GB or 128GB</memory>
+      <camera>12.2MP dual-pixel camera, 4K video recording</camera>
+      <battery>2800 mAh</battery>
+    </specifications>
+  </phone>
+  <phone>
+    <brand>OnePlus</brand>
+    <model>9</model>
+    <price>₱38,990</price>
+    <release_year>2021</release_year>
+    <specifications>
+      <display>6.55 inch Fluid AMOLED, 2400 x 1080 pixels</display>
+      <processor>Qualcomm Snapdragon 888</processor>
+      <memory>128GB or 256GB</memory>
+      <camera>
+        <type>Triple camera system</type>
+        <features>48MP main camera, 50MP ultra wide, 2MP monochrome</features>
+        <video>8K video recording</video>
+      </camera>
+      <battery>4500 mAh</battery>
+    </specifications>
+  </phone>
+</phones>

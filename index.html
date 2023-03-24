@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Phones:</h2>
+
+    <button type="button" onclick="loadXMLDoc()">
+    Show</button>
+    
+    <table id="demo" border="1" cellspacing="0" cellpadding="10" width="80%" align="center">
+    </table>
+    
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    createTable(this);
+                }
+            };
+            xmlhttp.open("GET", "phones.xml", true);
+            xmlhttp.send();
+        }
+        
+        function createTable(xml) {
+            var i, xmlDoc, txt;
+            
+            // Actual XML File Object mode
+            xmlDoc = xml.responseXML; 
+
+            txt = `
+                <tr>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                    <th>Release Year</th>
+                    <th>Display</th>
+                    <th>Processor</th>
+                    <th>Memory</th>
+                    <th>Camera</th>
+                    <th>Battery</th>
+                </tr>
+            `;
+
+            var phone = xmlDoc.getElementsByTagName("phone");
+            var brand = xmlDoc.getElementsByTagName("brand");
+            var model = xmlDoc.getElementsByTagName("model");
+            var price = xmlDoc.getElementsByTagName("price");
+            var release_year = xmlDoc.getElementsByTagName("release_year");
+            var display = xmlDoc.getElementsByTagName("display");
+            var processor = xmlDoc.getElementsByTagName("processor");
+            var memory = xmlDoc.getElementsByTagName("memory");
+            var camera = xmlDoc.getElementsByTagName("camera");
+            var battery = xmlDoc.getElementsByTagName("battery");
+
+            for (i = 0; i < phone.length; i++) {
+                
+        
+                txt += `
+                    <tr>
+                        <td>${brand[i].childNodes[0].nodeValue}</td>
+                        <td>${model[i].childNodes[0].nodeValue}</td>
+                        <td>${price[i].childNodes[0].nodeValue}</td>
+                        <td>${release_year[i].childNodes[0].nodeValue}</td>
+                        <td>${display[i].childNodes[0].nodeValue}</td>
+                        <td>${processor[i].childNodes[0].nodeValue}</td>
+                        <td>${memory[i].childNodes[0].nodeValue}</td>
+                        <td>${camera[i].childNodes[0].nodeValue}</td>
+                        <td>${battery[i].childNodes[0].nodeValue}</td>
+                    </tr>
+                `;
+            }
+
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+    </script>
+</body>
+</html>
